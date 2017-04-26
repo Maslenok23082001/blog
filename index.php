@@ -4,7 +4,7 @@ require_once "app/header.php";
 $result = $base->query("SELECT * FROM `categories_blog`");
 $result_blog = $base->query("SELECT * FROM `blogs` ORDER BY `id` DESC");
 $result_blog_cat = $base->query("SELECT * FROM `categories_blog`");
-$comment_result = $base->query("SELECT * FROM `comments_blog` ORDER BY `id` DESC");
+$comment_result = $base->query("SELECT * FROM `comments_blog`  ORDER BY `id` DESC LIMIT 5");
 
 ?>
     <div id="main_menu">
@@ -16,7 +16,7 @@ $comment_result = $base->query("SELECT * FROM `comments_blog` ORDER BY `id` DESC
 
                 $arr1[$n]=$row['title'];
                 $n++;
-                echo "<li><a href='#'>".$row['title']."</a></li>";
+                echo "<li><a href='pages/one_category.php?id=".$row['id']."'>".$row['title']."</a></li>";
             }
             ?>
         </ul>
@@ -36,7 +36,7 @@ $comment_result = $base->query("SELECT * FROM `comments_blog` ORDER BY `id` DESC
 
                                 echo "<div class='blog' style='width:700px; margin-left:100px; background-color:#999999;'>
                                        <p class='tit'><a href='pages/article.php?id_article=".$row['id']."&cat=".$arr1[$i]."'>".$row['title']."</a></p>
-                                      <p class='cat'><a href='#' style='color:red; font-size:14px; padding:1px 3px;'>".$arr1[$i]."</a></p>
+                                      <p class='cat'><a href='pages/one_category.php?id=".$row['category_id']."' style='color:red; font-size:14px; padding:1px 3px;'>".$arr1[$i]."</a></p>
                                       <div>".$row['text']."</div>
                                    </div>";
                          }
