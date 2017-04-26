@@ -26,13 +26,7 @@ else {
             <h1><?=$row_c['title']?></h1>
             <hr>
 
-                <?php
-                    if ($cat){
-                        echo $cat;
-                    }
-                else {
-                    echo $row_c[''];
-                }
+
                 ?>
 
                     <p class='cat'><a href='one_category.php?id=<?=$row['category_id']?>' style='color:red; font-size:14px; padding:1px 3px;'><?php ?></a></p>
