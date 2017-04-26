@@ -35,7 +35,7 @@ $comment_result = $base->query("SELECT * FROM `comments_blog` ORDER BY `id` DESC
                         if ($row['category_id']==$i){
 
                                 echo "<div class='blog' style='width:700px; margin-left:100px; background-color:#999999;'>
-                                       <p class='tit'><a href='pages/article.php?".$row['id']."'>".$row['title']."</a></p>
+                                       <p class='tit'><a href='pages/article.php?id_article=".$row['id']."&cat=".$arr1[$i]."'>".$row['title']."</a></p>
                                       <p class='cat'><a href='#' style='color:red; font-size:14px; padding:1px 3px;'>".$arr1[$i]."</a></p>
                                       <div>".$row['text']."</div>
                                    </div>";
