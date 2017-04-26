@@ -45,7 +45,7 @@ require_once "app/header.php";
 
                 <div class="comment">
                     <p class="com_tit">автор комментария</p>
-                    <p>текст комментария</p>
+                    <p> текст комментария</p>
                     <hr>
                 </div>
             </div>
